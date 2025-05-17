@@ -11,14 +11,14 @@ public class PaymentServiceUnitTests
 {
 	private static readonly Random _random = new();
 
-	private IDataStore _dataStore;
+	private IAccountDataStore _dataStore;
 
 	private PaymentService _sut;
 	
 	[SetUp]
 	public void SetUp()
 	{
-		_dataStore = Substitute.For<IDataStore>();
+		_dataStore = Substitute.For<IAccountDataStore>();
 		_sut = new PaymentService(_dataStore);
 	}
 
