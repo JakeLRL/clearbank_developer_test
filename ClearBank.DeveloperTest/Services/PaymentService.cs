@@ -10,7 +10,6 @@ namespace ClearBank.DeveloperTest.Services
 
 		public MakePaymentResult MakePayment(MakePaymentRequest request)
 		{
-			//var dataStoreType = ConfigurationManager.AppSettings["DataStoreType"]; still to implement
 			var account = _accountDataStore.GetAccount(request.DebtorAccountNumber);
 
 			if (account == null || !account.IsPaymentAllowed(request))
