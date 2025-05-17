@@ -1,17 +1,22 @@
-﻿using ClearBank.DeveloperTest.Services;
+﻿using ClearBank.DeveloperTest.Data;
+using ClearBank.DeveloperTest.Services;
 using ClearBank.DeveloperTest.Types;
+using NSubstitute;
 using NUnit.Framework;
 
 namespace ClearBank.DeveloperTest.Tests.Services;
 [TestFixture]
-public class PaymentServiceTests
+public class PaymentServiceUnitTests
 {
+	private IDataStore _dataStore;
+
 	private PaymentService _sut;
 	
 	[SetUp]
 	public void SetUp()
 	{
-		_sut = new PaymentService();
+		_dataStore = Substitute.For<IDataStore>();
+		_sut = new PaymentService(_dataStore);
 	}
 
 	[Test]
