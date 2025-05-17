@@ -9,7 +9,7 @@ namespace ClearBank.DeveloperTest.Services
 
 		public MakePaymentResult MakePayment(MakePaymentRequest request)
 		{
-			//var dataStoreType = ConfigurationManager.AppSettings["DataStoreType"];
+			//var dataStoreType = ConfigurationManager.AppSettings["DataStoreType"]; still to implement
 
 			var account = _dataStore.GetAccount(request.DebtorAccountNumber);
 
@@ -59,7 +59,6 @@ namespace ClearBank.DeveloperTest.Services
 			{
 				account.Balance -= request.Amount;
 				_dataStore.UpdateAccount(account);
-
 			}
 
 			return result;
