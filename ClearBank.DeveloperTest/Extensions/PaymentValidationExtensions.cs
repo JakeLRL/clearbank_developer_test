@@ -1,6 +1,6 @@
 ﻿using ClearBank.DeveloperTest.Types;
 
-namespace ClearBank.DeveloperTest.Validation
+namespace ClearBank.DeveloperTest.Extensions
 {
 	public static class PaymentValidationExtensions
 	{

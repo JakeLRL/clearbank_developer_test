@@ -1,6 +1,6 @@
 ﻿using ClearBank.DeveloperTest.Data;
+using ClearBank.DeveloperTest.Extensions;
 using ClearBank.DeveloperTest.Types;
-using ClearBank.DeveloperTest.Validation;
 
 namespace ClearBank.DeveloperTest.Services
 {
